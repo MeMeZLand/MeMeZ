@@ -1,6 +1,9 @@
 if game:GetService("CoreGui"):FindFirstChild("MeMeZAnnouncement") then return end
-local Supports = {}
-local Scriptname = Supports[game.PlaceId] or "Universal.lua"
+local Supports = {
+    ["128017651370280"] = "128017651370280",
+    ["138804971020716"] = "128017651370280"
+}
+local Scriptname = Supports[tostring(game.PlaceId)] or "Universal.lua"
 getgenv().MeMeZStorage = "https://raw.githubusercontent.com/MeMeZLand/MeMeZ/refs/heads/main/"
 local Announcement = loadstring(game:HttpGet(getgenv().MeMeZStorage.."Announcement.lua"))()
 local MeMeZAnnouncement = Instance.new("ScreenGui")
@@ -65,7 +68,7 @@ Confirm.AnchorPoint = Vector2.new(0.5, 0.5)
 Confirm.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Confirm.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Confirm.BorderSizePixel = 0
-Confirm.Position = UDim2.new(0.499401212, 0, 0.920127809, 0)
+Confirm.Position = UDim2.new(0.5, 0, 0.920127809, 0)
 Confirm.Size = UDim2.new(0.330538929, 0, 0.127795532, 0)
 Confirm.AutoButtonColor = false
 Confirm.Font = Enum.Font.SourceSans
@@ -77,6 +80,14 @@ Confirm.TextWrapped = true
 
 UICorner_2.CornerRadius = UDim.new(0.0500000007, 0)
 UICorner_2.Parent = Confirm
+
+Confirm.MouseEnter:Connect(function()
+    game:GetService("TweenService"):Create(Confirm, TweenInfo.new(0.25), {Transparency = 0.75}):Play()
+end)
+
+Confirm.MouseLeave:Connect(function()
+    game:GetService("TweenService"):Create(Confirm, TweenInfo.new(0.25), {Transparency = 0}):Play()
+end)
 
 Confirm.MouseButton1Click:Connect(function()
     MeMeZAnnouncement:Destroy()
