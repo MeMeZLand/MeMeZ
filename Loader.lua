@@ -1,7 +1,7 @@
 if game:GetService("CoreGui"):FindFirstChild("MeMeZAnnouncement") then return end
 local Supports = {
-    ["128017651370280"] = "128017651370280",
-    ["138804971020716"] = "128017651370280"
+    ["128017651370280"] = "Grow Your Country!.lua",
+    ["138804971020716"] = "Grow Your Country!.lua"
 }
 local Scriptname = Supports[tostring(game.PlaceId)] or "Universal.lua"
 getgenv().MeMeZStorage = "https://raw.githubusercontent.com/MeMeZLand/MeMeZ/refs/heads/main/"
