@@ -6,7 +6,7 @@ local Supports = {
 }
 local Scriptname = Supports[tostring(game.PlaceId)] or "Universal.lua"
 getgenv().MeMeZStorage = "https://raw.githubusercontent.com/MeMeZLand/MeMeZ/refs/heads/main/"
-local Announcement = loadstring(game:HttpGet(getgenv().MeMeZStorage.."Announcement.lua"))()
+local Announcement = loadstring(game:HttpGet(getgenv().MeMeZStorage.."Information.lua"))().Announcement
 local MeMeZAnnouncement = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
 local Title = Instance.new("TextLabel")
