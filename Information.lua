@@ -6,7 +6,7 @@ return {
     ["nil"] = "nil"
   },
   Blacklist = {
-    ["-3395236573-"] = "no we hate u"
+    [111] = "hahaloser",
   },
   Creators = {
     {
