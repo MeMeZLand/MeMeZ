@@ -3,7 +3,8 @@ local Supports = {
     ["128017651370280"] = "Grow Your Country!.lua",
     ["138804971020716"] = "Grow Your Country!.lua",
     ["18687417158"] = "Forsaken.lua",
-    ["92974099754510"] = "FPBJ2000.lua"
+    ["92974099754510"] = "FPBJ2000.lua",
+    ["14724906937"] = "KillstreakSwordFightingUniverse.lua",
 }
 local Scriptname = Supports[tostring(game.PlaceId)] or "Universal.lua"
 getgenv().MeMeZStorage = "https://raw.githubusercontent.com/MeMeZLand/MeMeZ/refs/heads/main/"
